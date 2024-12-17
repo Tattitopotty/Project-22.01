@@ -59,6 +59,7 @@ img {
     padding: 10px;
     margin-top: 25px;
     margin-bottom: 25px;
+    position: stickywwwwwwwww;
 }
 
 .navbar button {
@@ -85,7 +86,7 @@ img {
 .navbar ul li {
     list-style: none;
     display: block;
-    /* padding: 25px; */
+    padding: 5px 0px 5px;;
     position: relative;
 }
 
@@ -96,14 +97,19 @@ img {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: palegreen;
+    background-color: black;
+    opacity: 200%;
     padding: 0;
-    min-width: 150px;
-
+    width: 100%;
+    z-index: 10;
+}
+.navbar ul li ul li a{
+    text-decoration: none;
+    color: white;
 }
 
 nav ul li a:hover {
-    background-color: #28ee35;
+    background-color: gray;
     /* Lighter shade on hover */
 }
 
@@ -141,4 +147,49 @@ li>button:hover {
         display: none;
     }
 
+}
+/* ------------------------------------------------------- */
+/* Slide-show segment */
+.Slideshow {
+    position: relative;
+    border: solid black;
+    border-radius: 2%;
+    border-width: 2px;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.prewarrow,
+.nextarrow {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    background-color:black;
+    color: white;
+    border-radius: 25%;
+    cursor: pointer;
+    margin-left: 15px;
+    opacity: 50%;
+    font-size: larger;
+}
+.nextarrow{
+    margin-right:  15px;
+    right: 0;
+    size: 5px;
+}
+
+
+.photos img {
+    /* display: none; */
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+
+}
+
+@media (max-width:763px) {
+    .Slideshow {
+        min-height: 250px;
+    }
 }
